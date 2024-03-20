@@ -105,13 +105,22 @@ body {
   content: "ram avtar";
 }
 .animated-mail .letter .letter-context-body {
+  box-sizing: border-box;
+
   margin-top: 10px;
-  margin-left: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   /* height: 10px; */
   width: 99%;
   color: black;
   content: "ram avtar";
 }
+
+.letter-context-body strong {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 .animated-mail .letter .letter-stamp {
   margin-top: 30px;
   margin-left: 120px;
@@ -142,25 +151,61 @@ body {
   );
 }
 
-.letter-image:hover .animated-mail {
-  transform: translateY(50px);
-  -webkit-transform: translateY(50px);
-  -moz-transform: translateY(50px);
+@keyframs move {
+  100% {
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+  }
 }
-.letter-image:hover .animated-mail .top-fold {
-  transition: transform 0.4s, z-index 0.2s;
-  transform: rotateX(180deg);
-  -webkit-transition: transform 0.4s, z-index 0.2s;
-  -webkit-transform: rotateX(180deg);
-  -moz-transition: transform 0.4s, z-index 0.2s;
-  -moz-transform: rotateX(180deg);
-  z-index: 0;
+
+.animated-mail {
+  animation: move 0.8s 0.8s forwards;
 }
-.letter-image:hover .animated-mail .letter {
-  height: 280px;
-  content: "ram avtar";
-  color: #000;
+
+@keyframes fold {
+  100% {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    -webkit-transition: transform 0.4s, z-index 0.2s;
+    -webkit-transform: rotateX(180deg);
+    -moz-transition: transform 0.4s, z-index 0.2s;
+    -moz-transform: rotateX(180deg);
+    z-index: 0;
+  }
 }
-.letter-image:hover .shadow {
-  width: 250px;
+
+.animated-mail .top-fold {
+  animation: fold 0.8s 0.6s forwards;
+}
+
+@keyframes letter {
+  100% {
+    height: 280px;
+    content: "ram avtar";
+    color: #000;
+  }
+}
+
+.animated-mail .letter {
+  animation: letter 0.8s 1s forwards;
+}
+
+@keyframes shadow {
+  100% {
+    width: 250px;
+  }
+}
+
+.shadow {
+  animation: shadow 0.8s 1s forwards;
+}
+
+.letter-context-body {
+  font-size: 13px;
+}
+
+.letter-context-body strong {
+  font-size: 15px;
+  font-weight: 600;
 }
