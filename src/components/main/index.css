@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: #bdb2ff;
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+.rainbow {
+  font-size: 30px;
+  font-weight: bold;
+
+  animation: rainbow 2.5s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes left-fade-in {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.first-image {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 70px;
+  height: auto;
+
+  animation: left-fade-in 1s infinite;
+}
+
+@keyframes right-fade-in {
+  0% {
+    transform: translateX(100%) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(0deg);
+  }
+}
+
+.second-image {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+
+  width: 70px;
+  height: auto;
+
+  animation: right-fade-in 1.5s infinite;
+}

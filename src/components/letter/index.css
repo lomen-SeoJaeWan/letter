@@ -203,9 +203,71 @@ body {
 
 .letter-context-body {
   font-size: 13px;
+
+  text-align: left;
 }
 
 .letter-context-body strong {
   font-size: 15px;
   font-weight: 600;
+}
+
+@keyframes scale {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.red,
+.orange,
+.yellow,
+.green,
+.blue,
+.purple {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.red {
+  animation: scale 0.2s forwards;
+  background: #ffadad;
+}
+
+.orange {
+  animation: scale 0.2s 0.2s forwards;
+  background: #ffd6a5;
+}
+
+.yellow {
+  animation: scale 0.2s 0.4s forwards;
+  background: #fdffb6;
+}
+
+.green {
+  animation: scale 0.2s 0.6s forwards;
+  background: #caffbf;
+}
+
+.blue {
+  animation: scale 0.2s 0.8s forwards;
+  background: #9bf6ff;
+}
+
+.purple {
+  animation: scale 0.2s 1s forwards;
+  background: #bdb2ff;
+}
+
+button {
+  border: none;
+  background: none;
 }
