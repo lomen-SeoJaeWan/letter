@@ -133,7 +133,7 @@ body {
 
 .shadow {
   position: absolute;
-  top: 200px;
+  top: 300px;
   left: 50%;
   width: 400px;
   height: 30px;
@@ -160,7 +160,7 @@ body {
 }
 
 .animated-mail {
-  animation: move 0.8s 0.8s forwards;
+  /* animation: move 0.8s 0.8s forwards; */
 }
 
 @keyframes fold {
@@ -190,7 +190,7 @@ body {
 .animated-mail .letter {
   animation: letter 0.8s 1s forwards;
 }
-
+/* 
 @keyframes shadow {
   100% {
     width: 250px;
@@ -199,7 +199,7 @@ body {
 
 .shadow {
   animation: shadow 0.8s 1s forwards;
-}
+} */
 
 .letter-context-body {
   font-size: 13px;
