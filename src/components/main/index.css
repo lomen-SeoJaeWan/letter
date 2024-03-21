@@ -2,10 +2,9 @@ body {
   margin: 0;
 }
 
-.background {
+.contents {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  z-index: 2;
 
   display: flex;
   justify-content: center;
@@ -13,7 +12,36 @@ body {
 
   overflow: hidden;
 
-  background: #bdb2ff;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.bonobono-image {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80%;
+  height: auto;
+
+  z-index: 1;
+
+  animation: fade 2s infinite;
 }
 
 @keyframes rainbow {
